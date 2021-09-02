@@ -1,4 +1,4 @@
-# Linux subsystem for Windows for robotics
+# Linux subsystem under Windows for robotics
 ## Summary
 The aim of this repo to setup a linux distrubution under Windows that can be used for robotics.
 
