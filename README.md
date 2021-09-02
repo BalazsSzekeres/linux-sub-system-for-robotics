@@ -22,6 +22,31 @@ On an existing WSL setup use:
 5. Followed by `wsl --shutdown`.
 
 ### Installing Ubuntu
-The preferred Ubuntu version can be installed from the Microsoft store. 
+The preferred Ubuntu version can be installed from the Microsoft store. The latest LTS can be found here: https://www.microsoft.com/store/apps/9n6svws3rx71
 
+### Installing the required packages
+The following command can be used to install every required package:
+```
+sudo apt-get update && sudo apt-get install -y \
+    build-essential \
+    libssl-dev \
+    uuid-dev \
+    libgpgme11-dev \
+    squashfs-tools \
+    libseccomp-dev \
+    wget \
+    pkg-config \
+    git \
+    gitk \
+    cryptsetup \
+    apt-transport-https \
+    apt-xapian-index \
+    cmake \
+    less \
+    mesa-utils\
+    nano \
+    screen \
+    synaptic \
+    terminator    
+```
 
