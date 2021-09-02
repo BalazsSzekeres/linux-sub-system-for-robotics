@@ -79,8 +79,9 @@ OpenGL ES profile extensions:
 2. In the newly created folder clone the singularity repo: `git clone https://github.com/sylabs/singularity.git`
 3. Navigate to the cloned folder and fetch: `git fetch --all`
 4. Checkout the tag: `git checkout 2.6.1`
-5. Run `./autogen.sh` followed by `./configure --prefix=/usr/local --sysconfdir=/etc` then `make`
-6. Finally run `sudo make install`
+5. Using nano, modify line 55 in `src/lib/image/squashfs/mount.c` from `if ( singularity_mount(loop_dev, mount_point, "squashfs", MS_NOSUID|MS_RDONLY|MS_NODEV, "errors=remount-ro") < 0 ) {` to `if ( singularity_mount(loop_dev, mount_point, "squashfs", MS_NOSUID|MS_RDONLY|MS_NODEV, NULL) < 0 ) {`. This step is only required when the linux kernal is above version 5.
+6. Run `./autogen.sh` followed by `./configure --prefix=/usr/local --sysconfdir=/etc` then `make`
+7. Finally run `sudo make install`
 
 Singularity will be installed in the `/usr/local` directory hierarchy by default. And if you specify a custom directory with the `--prefix` option, all of Singularity’s binaries and the configuration file will be installed within that directory. This last option can be useful if you want to install multiple versions of Singularity, install Singularity on a shared system, or if you want to remove Singularity easily after installing it.
 
