@@ -24,6 +24,8 @@ On an existing WSL setup use:
 ### Installing Ubuntu
 The preferred Ubuntu version can be installed from the Microsoft store. The latest LTS can be found here: https://www.microsoft.com/store/apps/9n6svws3rx71
 
+After installation, check that the distro is using WSL 2 by `wsl --list --verbose`. If the version is not correct, `wsl --set-version <distribution name> <versionNumber>` can be used to change the version number.
+
 ### Installing the required packages
 The following command can be used to install every required package:
 ```
