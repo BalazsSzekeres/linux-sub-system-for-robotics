@@ -23,7 +23,7 @@ On an existing WSL setup use:
 5. Followed by `wsl --shutdown`.
 
 ### Installing Ubuntu
-The preferred Ubuntu version can be installed from the Microsoft store. The latest LTS can be found here: https://www.microsoft.com/store/apps/9n6svws3rx71
+The preferred Ubuntu version can be installed from the Microsoft store. Ubuntu 18.04 LTS is confirmed working. Kernel versions above 5 can cause unexpected issues, see: https://github.com/hpcng/singularity/issues/5144
 
 After installation, check that the distro is using WSL 2 by `wsl --list --verbose`. If the version is not correct, `wsl --set-version <distribution name> <versionNumber>` can be used to change the version number.
 
