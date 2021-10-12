@@ -86,3 +86,12 @@ OpenGL ES profile extensions:
 Singularity will be installed in the `/usr/local` directory hierarchy by default. And if you specify a custom directory with the `--prefix` option, all of Singularity’s binaries and the configuration file will be installed within that directory. This last option can be useful if you want to install multiple versions of Singularity, install Singularity on a shared system, or if you want to remove Singularity easily after installing it.
 
 If you omit the `--sysconfdir` option , the configuration file will be installed in `/usr/local/etc`. If you omit the `--prefix` option, Singularity will be installed in the `/usr/local` directory hierarchy by default. And if you specify a custom directory with the `--prefix` option, all of Singularity’s binaries and the configuration file will be installed within that directory.
+
+### Setting up X11 display to use with Singularity
+1. Download and install: https://sourceforge.net/projects/vcxsrv/files/latest/download
+2. Start `XLaunch`, and give it public access, and tick all boxes.
+3. On the WSL terminal use:
+```
+export DISPLAY=<HOST IP>:0.0
+export export LIBGL_ALWAYS_INDIRECT=1
+```
