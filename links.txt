@@ -1,0 +1,4 @@
+Bash: https://linuxcontainers.org/lxd/try-it/
+C++: https://www.codechef.com/ide
+Ros book: https://www.cse.sc.edu/~jokane/agitr/
+
